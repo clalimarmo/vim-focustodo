@@ -7,14 +7,10 @@ function! FocusTODO()
 	endfunction
 	command! FNN call FindNextNow()
 
-	echo ":FNN\tFindNextNow()"
-
 	function! FindNextOnDeck()
 		let @/='\[ \].*'
 		execute "normal! //b+1\<CR>"
 	endfunction
 	command! FNO call FindNextOnDeck()
-
-	echo ":FNO\tFindNextOnDeck()"
 endfunction
 command! FocusTODO call FocusTODO()

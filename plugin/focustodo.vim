@@ -4,7 +4,7 @@ function! FocusTODO()
 	function! FindNextNow()
 		let @/='\[[c|n]\].*'
 		set hlsearch
-		call feedkeys("/b+1\<CR>")
+		call feedkeys("//b+1\<CR>")
 	endfunction
 	command! FNN call FindNextNow()
 

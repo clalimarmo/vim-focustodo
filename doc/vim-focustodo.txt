@@ -1,0 +1,19 @@
+BYO formatting task tracking plugin
+
+Adds the following commands:
+
+`:FocusTODO` - enables the other commands - use this if you aren't using `.todo` file extension
+
+The following commands are automatically registered if you open a file
+with a `.todo` file extension
+
+`:FNO` - find next on-deck
+`:FNN` - find next doing-now
+`:FNX` - find next done
+
+Assumes the following task annotations:
+
+	[ ] a task that is not done
+	[c] a task currently in progress
+	[n] also a task currently in progress
+	[x] a task that's done

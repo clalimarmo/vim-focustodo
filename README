@@ -2,7 +2,7 @@ BYO formatting task tracking plugin
 
 Adds the following commands:
 
-`:Focus` - enables the other commands - use this if you aren't using `.todo` file extension
+`:FocusTODO` - enables the other commands - use this if you aren't using `.todo` file extension
 
 The following commands are automatically registered if you open a file
 with a `.todo` file extension

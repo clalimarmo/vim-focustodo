@@ -21,5 +21,12 @@ function! FocusTODO()
 		call feedkeys("//b+1\<CR>")
 	endfunction
 	command! FNX call FindNextDone()
+
+	function! FindNextCustom(marker)
+		let @/='\[[' . a:marker . ']\].*'
+		set hlsearch
+		call feedkeys("//b+1\<CR>")
+	endfunction
+	command! -nargs=1 FN call FindNextCustom(<f-args>)
 endfunction
 command! FocusTODO call FocusTODO()

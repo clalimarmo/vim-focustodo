@@ -28,5 +28,15 @@ function! FocusTODO()
 		call feedkeys("//b+1\<CR>")
 	endfunction
 	command! -nargs=1 FN call FindNextCustom(<f-args>)
+
+	function! TaskOnDeck()
+		call feedkeys("o[ ]	")
+	endfunction
+	command! TO call TaskOnDeck()
+
+	function! TaskNow()
+		call feedkeys("o[n]	")
+	endfunction
+	command! TN call TaskNow()
 endfunction
 command! FocusTODO call FocusTODO()

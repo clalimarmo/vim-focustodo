@@ -26,6 +26,7 @@ function! FocusTODO()
 		let @/='$\[.\].*'
 		set hlsearch
 		call feedkeys("//b+1\<CR>")
+	endfunction
 	command! FNR call FindNextRoot()
 
 	function! FindNextCustom(marker)

@@ -22,6 +22,12 @@ function! FocusTODO()
 	endfunction
 	command! FNX call FindNextDone()
 
+	function! FindNextRoot()
+		let @/='$\[.\].*'
+		set hlsearch
+		call feedkeys("//b+1\<CR>")
+	command! FNR call FindNextRoot()
+
 	function! FindNextCustom(marker)
 		let @/='\[[' . a:marker . ']\].*'
 		set hlsearch

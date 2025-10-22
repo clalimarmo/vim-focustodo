@@ -23,7 +23,7 @@ function! FocusTODO()
 	command! FNX call FindNextDone()
 
 	function! FindNextRoot()
-		let @/='$\[.\].*'
+		let @/='^\[.\].*'
 		set hlsearch
 		call feedkeys("//b+1\<CR>")
 	endfunction

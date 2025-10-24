@@ -30,7 +30,7 @@ function! FocusTODO()
 	command! FNR call FindNextRoot()
 
 	function! FindNextItemAtLevel(level)
-		let @/='^\t\{' . a:level . '\}\ze\[.\].*\ze'
+		let @/='^\t\{' . a:level . '\}\zs\[.\].*\ze'
 		set hlsearch
 		call feedkeys("//b+1\<CR>")
 	endfunction

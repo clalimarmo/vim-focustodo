@@ -29,6 +29,13 @@ function! FocusTODO()
 	endfunction
 	command! FNR call FindNextRoot()
 
+	function! FindNextItemAtLevel(level)
+		let @/='^\t\{' . a:level . '\}\ze\[.\].*\ze'
+		set hlsearch
+		call feedkeys("//b+1\<CR>")
+	endfunction
+	command! -nargs=1 FNL call FindNextItemAtLevel(<f-args>)
+
 	function! FindNextCustom(marker)
 		let @/='\[[' . a:marker . ']\].*'
 		set hlsearch
